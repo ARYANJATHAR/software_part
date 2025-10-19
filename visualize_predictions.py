@@ -8,9 +8,10 @@ from matplotlib.animation import FuncAnimation
 import seaborn as sns
 import os
 import sys
-# Add project directory to path
-sys.path.append('/app/eeg_command_classifier_0728')
-from config import *
+from config import (
+    CLASS_NAMES,
+    RESULTS_DIR,
+)
 # Set up matplotlib style
 plt.style.use('seaborn-v0_8')
 plt.rcParams['font.size'] = 10

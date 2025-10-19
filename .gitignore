@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environments
+.env
+.venv
+
+# Data/Models/Results artifacts (keep directories, ignore heavy files)
+/data/*.npz
+/models/*.pth
+/models/*.pkl
+/results/*.png
+/results/*.json
+
+# VS Code
+.vscode/

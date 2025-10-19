@@ -7,10 +7,19 @@ import torch.nn as nn
 import time
 import sys
 import os
-# Add project directory to path
-sys.path.append('/app/eeg_command_classifier_0728')
-# Import our modules
-from config import *
+# Import our modules (repo-relative configuration)
+from config import (
+    SAMPLING_RATE,
+    N_CHANNELS,
+    N_CLASSES,
+    BANDPASS_RANGE,
+    WINDOW_LENGTH,
+    CLASS_LABELS,
+    CLASS_NAMES,
+    DATA_DIR,
+    MODEL_DIR,
+    RESULTS_DIR,
+)
 from preprocessing import bandpass_filter, normalize_signal
 class EEG1DCNN(nn.Module):
     """

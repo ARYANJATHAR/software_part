@@ -17,10 +17,12 @@ CLASS_LABELS = {
 }
 # Class names for plotting and reporting
 CLASS_NAMES = ['neutral', 'fan_on', 'fan_off', 'light_on', 'light_off']
-# Data directory paths
-DATA_DIR = '/app/eeg_command_classifier_0728/data'
-MODEL_DIR = '/app/eeg_command_classifier_0728/models'
-RESULTS_DIR = '/app/eeg_command_classifier_0728/results'
+# Data directory paths (repo-relative for portability)
+import os
+_BASE_DIR = os.path.dirname(__file__)
+DATA_DIR = os.path.join(_BASE_DIR, 'data')
+MODEL_DIR = os.path.join(_BASE_DIR, 'models')
+RESULTS_DIR = os.path.join(_BASE_DIR, 'results')
 # Model parameters
 RF_N_ESTIMATORS = 100
 CNN_EPOCHS = 50

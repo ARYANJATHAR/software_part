@@ -8,10 +8,13 @@ import time
 import argparse
 import sys
 import os
-# Add project directory to path
-sys.path.append('/app/eeg_command_classifier_0728')
-# Import our modules
-from config import *
+# Import our modules (repo-relative configuration)
+from config import (
+    DATA_DIR,
+    RESULTS_DIR,
+    CLASS_LABELS,
+    CLASS_NAMES,
+)
 from inference import RFInferenceEngine
 from inference_cnn import CNNInferenceEngine
 from visualize_predictions import EEGVisualizer
